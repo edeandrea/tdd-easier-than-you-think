@@ -12,8 +12,11 @@
   ** PostgreSQL JDBC Driver
   ** OpenAPI
   ** Health
+  ** OpenTelemetry
+  ** Micrometer OpenTelemetry Bridge
   ** Jib
 . Edit `pom.xml`
+.. Add Otel dependencies (`tdd 1 - pomOtelDeps` live template)
 .. Add test dependencies (`tdd 2 - pomTestDeps` live template)
 . Go into link:../src/main/resources/application.properties[`src/main/resources/application.properties`] and add base config (`tdd 3 - baseConfig` live template)
 
