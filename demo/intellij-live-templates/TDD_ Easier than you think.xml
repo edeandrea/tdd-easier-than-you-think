@@ -19,7 +19,7 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="tdd 3 - baseConfig" value="# Container image base image for Java 21&#10;quarkus.jib.base-jvm-image=registry.access.redhat.com/ubi9/openjdk-21-runtime:1.20&#10;&#10;# Turn on continuous testing by default&#10;quarkus.test.continuous-testing=enabled&#10;&#10;# Turn on instrumentation-based reload&#10;quarkus.live-reload.instrumentation=true&#10;&#10;# Logging configuration&#10;%dev,test.quarkus.log.category.&quot;com.example&quot;.level=DEBUG&#10;&#10;# Prod hibernate config&#10;%prod.quarkus.hibernate-orm.database.generation=drop-and-create&#10;%prod.quarkus.hibernate-orm.sql-load-script=import.sql&#10;&#10;$END$" description="Pet Prod Hibernate config" toReformat="false" toShortenFQNames="true">
+  <template name="tdd 3 - baseConfig" value="# Container image base image for Java 21&#10;quarkus.jib.base-jvm-image=registry.access.redhat.com/ubi9/openjdk-21-runtime:1.21&#10;&#10;# Turn on continuous testing by default&#10;quarkus.test.continuous-testing=enabled&#10;&#10;# Turn on instrumentation-based reload&#10;quarkus.live-reload.instrumentation=true&#10;&#10;# Logging configuration&#10;%dev,test.quarkus.log.category.&quot;com.example&quot;.level=DEBUG&#10;&#10;# Prod hibernate config&#10;%prod.quarkus.hibernate-orm.database.generation=drop-and-create&#10;%prod.quarkus.hibernate-orm.sql-load-script=import.sql&#10;&#10;$END$" description="Pet Prod Hibernate config" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="CUCUMBER_FEATURE_FILE" value="false" />
       <option name="Properties" value="true" />
@@ -69,7 +69,7 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="tdd 2 - pomTestDeps" value="&lt;dependency&gt;&#10;&#9;&lt;groupId&gt;io.quarkus&lt;/groupId&gt;&#10;&#9;&lt;artifactId&gt;quarkus-junit5-mockito&lt;/artifactId&gt;&#10;&#9;&lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;&#9;&lt;groupId&gt;org.assertj&lt;/groupId&gt;&#10;&#9;&lt;artifactId&gt;assertj-core&lt;/artifactId&gt;&#10;&#9;&lt;version&gt;3.26.3&lt;/version&gt;&#10;&#9;&lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;  &lt;groupId&gt;io.rest-assured&lt;/groupId&gt;&#10;&#9;&lt;artifactId&gt;rest-assured&lt;/artifactId&gt;&#10;&#9;&lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;" description="Test deps for pom.xml" toReformat="false" toShortenFQNames="true">
+  <template name="tdd 2 - pomTestDeps" value="&lt;dependency&gt;&#10;&#9;&lt;groupId&gt;io.quarkus&lt;/groupId&gt;&#10;&#9;&lt;artifactId&gt;quarkus-junit5-mockito&lt;/artifactId&gt;&#10;&#9;&lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;&#9;&lt;groupId&gt;org.assertj&lt;/groupId&gt;&#10;&#9;&lt;artifactId&gt;assertj-core&lt;/artifactId&gt;&#10;&#9;&lt;version&gt;3.27.3&lt;/version&gt;&#10;&#9;&lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;  &lt;groupId&gt;io.rest-assured&lt;/groupId&gt;&#10;&#9;&lt;artifactId&gt;rest-assured&lt;/artifactId&gt;&#10;&#9;&lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;" description="Test deps for pom.xml" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="MAVEN" value="true" />
     </context>
@@ -94,7 +94,7 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="tdd 1 - pomOtelDeps" value="&lt;dependency&gt;&#10;  &lt;groupId&gt;io.opentelemetry.instrumentation&lt;/groupId&gt;&#10;&#9;&lt;artifactId&gt;opentelemetry-jdbc&lt;/artifactId&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;  &lt;groupId&gt;io.quarkus&lt;/groupId&gt;&#10;  &lt;artifactId&gt;quarkus-observability-devservices-lgtm&lt;/artifactId&gt;&#10;  &lt;scope&gt;provided&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;  &lt;groupId&gt;io.quarkiverse.micrometer.registry&lt;/groupId&gt;&#10;  &lt;artifactId&gt;quarkus-micrometer-registry-otlp&lt;/artifactId&gt;&#10;  &lt;version&gt;3.2.4&lt;/version&gt;&#10;&lt;/dependency&gt;" description="OpenTelemetry dependencies for pom.xml" toReformat="false" toShortenFQNames="true">
+  <template name="tdd 1 - pomOtelDeps" value="&lt;dependency&gt;&#10;  &lt;groupId&gt;io.opentelemetry.instrumentation&lt;/groupId&gt;&#10;&#9;&lt;artifactId&gt;opentelemetry-jdbc&lt;/artifactId&gt;&#10;&lt;/dependency&gt;&#10;&lt;!--&#10;&lt;dependency&gt;&#10;  &lt;groupId&gt;io.quarkus&lt;/groupId&gt;&#10;  &lt;artifactId&gt;quarkus-observability-devservices-lgtm&lt;/artifactId&gt;&#10;  &lt;scope&gt;provided&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;--&gt;" description="OpenTelemetry dependencies for pom.xml" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="MAVEN" value="true" />
     </context>
@@ -133,7 +133,7 @@
       <option name="browserslist" value="false" />
     </context>
   </template>
-  <template name="tdd 11a - aiCreatePetResource" value="Create a Jakarta Rest resource class that satisfies all of the unit tests in the following test class. These are  constraints that I don't want to violate:&#10;&#10;- Only create two methods&#10;- Don't throw any exceptions within the methods&#10;- Don't create variables that aren't needed&#10;&#10;Other preferences I have in order from most important to least important:&#10;- Prefer constructor injection&#10;- Optional input parameters should be represented as Optionals&#10;- Prefer using map functions when using Optionals&#10;- Prefer returning objects other than Response&#10;&#10;----------&#10;This is the test class:" description="Prompt to have AI generate the PetResource class" toReformat="false" toShortenFQNames="true">
+  <template name="tdd 11a - aiCreatePetResource" value="Create a Jakarta Rest resource class that satisfies all of the unit tests in the provided test class. These are constraints that I don't want to violate:&#10;&#10;- Only create two methods&#10;- Don't throw any exceptions within the methods&#10;- Don't create variables that aren't needed&#10;&#10;Other preferences I have in order from most important to least important:&#10;- Prefer constructor injection&#10;- Optional input parameters should be represented as Optionals&#10;- Prefer using map functions when using Optionals&#10;- Prefer returning objects other than Response&#10;&#10;----------&#10;This is the test class:" description="Prompt to have AI generate the PetResource class" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="ANY_OPENAPI_JSON_FILE" value="false" />
       <option name="ANY_OPENAPI_YAML_FILE" value="false" />
