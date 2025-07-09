@@ -168,16 +168,16 @@ public Optional<Pet> adoptPetIfFound(String kind, String owner) {
 ----
 // Set up mock to return a pet when repo.listAll() is called
 when(this.petRepository.listAll())
-	.thenReturn(List.of(new Pet(1L, "fluffy", "cat")));
+		.thenReturn(List.of(new Pet(1L, "fluffy", "cat")));
 
 // Execute GET to /pets & assert
 get("/pets").then()
-	.contentType(ContentType.JSON)
-	.statusCode(OK.getStatusCode())
-	.body("$.size()", is(1))
-	.body("[0].name", is("fluffy"))
-	.body("[0].kind", is("cat"))
-	.body("[0].adoptedBy", blankOrNullString());
+		.statusCode(Status.OK.getStatusCode())
+		.contentType(ContentType.JSON)
+		.body("$.size()", is(1))
+		.body("[0].name", is("fluffy"))
+		.body("[0].kind", is("cat"))
+		.body("[0].adoptedBy", blankOrNullString());
 
 // Verify interactions
 verify(this.petRepository).listAll();
