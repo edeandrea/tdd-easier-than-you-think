@@ -21,10 +21,9 @@ public class PetRepository implements PanacheRepository<Pet> {
 	@Transactional
 	public Optional<Pet> adoptPetIfFound(String kind, String owner) {
 		Log.infof("Looking for an adoptable pet of kind '%s'", kind);
-		var pet = find("kind = ?1 AND adoptedBy IS NULL ORDER BY RANDOM()", kind)
-			.page(0, 1)
-			.withLock(LockModeType.PESSIMISTIC_WRITE)
-			.firstResultOptional();
+		var pet = find("kind = ?1 AND adoptedBy IS NULL ORDER BY RANDOM() LIMIT 1", kind)
+        .withLock(LockModeType.PESSIMISTIC_WRITE)
+        .firstResultOptional();
 
 		pet.ifPresentOrElse(
 			p -> {
